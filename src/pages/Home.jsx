@@ -2,7 +2,7 @@
 
 import { Link } from "react-router-dom"
 import { ArrowRight, Shield, Truck, Leaf, Snowflake, Users, Award, Clock, Factory } from "lucide-react"
-import { useState, useRef } from "react"
+import { Typewriter } from "react-simple-typewriter"
 
 import { motion } from "framer-motion"
 import { useInView, useCountUp } from "../lib/utils"
@@ -36,7 +36,7 @@ const Home = () => {
     const count2 = useCountUp({ end: parsedFacts[2].num, duration: parsedFacts[2].num > 1000 ? 2 : 1, shouldStart: inView });
     const count3 = useCountUp({ end: parsedFacts[3].num, duration: parsedFacts[3].num > 1000 ? 2 : 1, shouldStart: inView });
 
-    
+
     return (
         <div className="min-h-screen">
             {/* Hero Section with Video */}
@@ -59,8 +59,22 @@ const Home = () => {
                             Premium Frozen Food Products for Global Markets
                         </h1>
                         <p className="text-xl lg:text-2xl text-gray-100 leading-relaxed drop-shadow-black border-black">
-                            From farm to freezer, we deliver exceptional quality frozen foods that preserve nature's goodness and
-                            nutritional value.
+                            We commit, We care, We Comfort, our client
+                        </p>
+                        <p className="text-xl lg:text-2xl text-gray-100 leading-relaxed drop-shadow-black border-black">
+                            <Typewriter
+                                words={[
+                                    "We reach 6000+ farmers",
+                                    "Our production capacity 20 tons/day",
+                                    "Delivering quality and trust across India"
+                                ]}
+                                loop
+                                cursor
+                                cursorStyle="|"
+                                typeSpeed={70}
+                                deleteSpeed={50}
+                                delaySpeed={1000}
+                            />
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link
@@ -81,7 +95,7 @@ const Home = () => {
                 </div>
             </section>
 
-            
+
 
             {/* Features Section */}
             <section className="py-20 bg-[#F9F9F6]">
@@ -94,7 +108,7 @@ const Home = () => {
                         </p>
                     </div>
                     <div>
-                        <WhyChooseUs/>
+                        <WhyChooseUs />
                     </div>
                 </div>
             </section>
@@ -172,9 +186,9 @@ const Home = () => {
             <section className="bg-white py-16 px-4 md:px-8" ref={ref}>
                 <div className="max-w-7xl mx-auto text-center">
                     <h2 className="text-3xl lg:text-4xl font-bold text-[#1C4532] mb-4">Impressive Numbers</h2>
-                        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                            Our commitment to excellence is reflected in these remarkable achievements
-                        </p>
+                    <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Our commitment to excellence is reflected in these remarkable achievements
+                    </p>
                     <div className="grid gap-10 mt-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
                         {parsedFacts.map((fact, index) => (
                             <motion.div
@@ -185,7 +199,7 @@ const Home = () => {
                                 viewport={{ once: true }}
                                 className="relative overflow-hidden bg-white p-10 rounded-2xl text-center border border-green-100 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-green-200"
                             >
-                        
+
                                 {/* Icon */}
                                 <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center rounded-2xl bg-[#1C4532] text-white shadow-md">
                                     {fact.icon}
@@ -219,9 +233,9 @@ const Home = () => {
                             Serving premium frozen products to customers across four continents with the same commitment to quality
                         </p>
                     </div>
-                    <GlobalPresenceSection/>
+                    <GlobalPresenceSection />
                     <div>
-                        
+
                     </div>
                 </div>
             </section>
