@@ -8,11 +8,13 @@ import Brands from "./pages/Brands"
 import ContactUs from "./pages/ContactUs"
 import OurClients from "./pages/OurClients"
 import ProductDetail from "./pages/ProductDetail" // Import the new ProductDetail component
+import ScrollToTop from "./components/ScrollToTop"
 
 function App() {
   return (
     <Router>
       <div className="min-h-screen bg-[#F9F9F6] font-sans">
+        <ScrollToTop />
         <Navbar />
         <main>
           <Routes>
