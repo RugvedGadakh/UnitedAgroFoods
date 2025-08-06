@@ -24,8 +24,8 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1 space-y-6">
             <Link to="/" className="flex items-center space-x-3">
-              <div className="bg-[#8DBE4E] p-3 rounded-lg">
-                <Leaf className="h-8 w-8 text-[#1C4532]" />
+              <div className="bg-[#F9F9F6] p-2 rounded-lg">
+                <img src="Images/logo.png" className="h-11 w-11 " />
               </div>
               <div className="flex flex-col">
                 <span className="text-white font-bold text-2xl leading-tight">United Agro</span>
