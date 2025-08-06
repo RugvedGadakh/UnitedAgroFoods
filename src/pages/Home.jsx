@@ -59,7 +59,7 @@ const Home = () => {
                             Premium Frozen Food Products for Global Markets
                         </h1>
                         <p className="text-xl lg:text-2xl text-gray-100 leading-relaxed drop-shadow-black border-black">
-                            We commit, We care, We Comfort, our client
+                            We commit, We care, We Comfort our client
                         </p>
                         <p className="text-xl lg:text-2xl text-gray-100 leading-relaxed drop-shadow-black border-black">
                             <Typewriter
